@@ -1,0 +1,11 @@
+- https://web.dev/learn/css/
+- https://www.w3schools.com/cssref/css_selectors.php
+- https://www.w3schools.com/cssref/index.php
+
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+- https://css-tricks.com/snippets/css/system-font-stack/
+- https://css-tricks.com/snippets/css/using-font-face-in-css/
+- https://css-tricks.com/snippets/css/link-pseudo-classes-in-order/
+- 

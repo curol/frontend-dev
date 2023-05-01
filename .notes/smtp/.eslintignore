@@ -1,0 +1,10 @@
+node_modules
+.pnpm-store
+.pnpm-lock.yaml
+.git
+.github
+.next
+.vercel
+**/.next/**
+**/_next/**
+**/dist/**
