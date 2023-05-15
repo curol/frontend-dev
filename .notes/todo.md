@@ -5,6 +5,7 @@
 ### Questions
 
 - Is project or repo a library or application?
+- CI?
 
 ### Stages
 
@@ -22,7 +23,6 @@
 3. Build
     - Compile/Transpile
 4. Production
-5. CI
 
 ## Frontned Projects
 
