@@ -1,16 +1,49 @@
 {
   "name": "01-html",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Modern Javascript Project",
+  "exports": "./src/index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup --config rollup.config.cjs --watch",
+    "build": "rollup --config rollup.config.cjs",
+    "serve": "live-server --port=8080 --host=localhost dist",
+    "format": "pnpm format:fix",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "format:fix": "prettier --write \"src/**/*.ts\"",
+    "lint": "pnpm lint:fix",
+    "lint:check": "eslint \"src/**/*.ts\"",
+    "lint:config": "eslint --print-config \"src/**/*.ts\"",
+    "lint:fix": "eslint --fix \"src/**/*.ts\"",
+    "tsc": "tsc",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-eslint": "^9.0.3",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-strip": "^3.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@rollup/plugin-url": "^8.0.1",
+    "@rollup/plugin-yaml": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.8",
     "rollup": "^3.21.2",
+    "rollup-plugin-serve": "^2.0.2",
     "typescript": "^5.0.4"
+  },
+  "packageManager": "pnpm@7.27.1",
+  "engines": {
+    "node": ">=18.14.2"
   }
 }
