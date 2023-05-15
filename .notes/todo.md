@@ -4,7 +4,10 @@
 
 ### Questions
 
-- Is project or repo a library or application?
+- Is project/repo a library or application?
+- Reinventing the wheel?
+- Services?
+- Tools?
 - CI?
 
 ### Stages
