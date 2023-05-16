@@ -1,5 +1,9 @@
 # TODO
 
+## Ideas
+
+https://github.com/vitejs/vite-plugin-react-swc
+
 ## Project
 
 ### Questions
@@ -9,6 +13,16 @@
 - Services?
 - Tools?
 - CI?
+- DNS?
+
+### Resources
+
+- web help - https://web.dev/
+- git cheat sheet - https://ndpsoftware.com/git-cheatsheet.html#loc=index;
+
+- mock smtp server - https://github.com/rnwood/smtp4dev
+- dev server - https://github.com/tapio/live-server
+
 
 ### Stages
 
@@ -39,6 +53,16 @@
 - web components
 - monorepo
 
+### Compilers
+
+- swc
+- esbuild
+
+### Bundlers
+- vite
+- rollup
+- tsup
+
 ### 01-html
 
 - Basics
@@ -47,6 +71,16 @@
 - SEO
 - Responsive
 - Head/Meta
+
+#### Development
+
+- Dev Server: https://github.com/tapio/live-server
+
+#### Test
+
+#### Build
+
+#### Production
 
 ### 02-css
 
@@ -72,3 +106,4 @@
 - tcp/ip
 - sockets
 - server/client
+

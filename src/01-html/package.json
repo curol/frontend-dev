@@ -1,7 +1,7 @@
 {
   "name": "01-html",
   "version": "1.0.0",
-  "description": "Modern Javascript Project",
+  "description": "Modern Frontned HTML Project",
   "exports": "./src/index.ts",
   "type": "module",
   "scripts": {
