@@ -12,6 +12,6 @@
 
   // Linter
   "eslint.enable": true,
-  "eslint.packageManager": "pnpm"
-  // "eslint.runtime": ""
+  "eslint.packageManager": "pnpm",
+  "eslint.runtime": "./node_modules/.bin/eslint"
 }

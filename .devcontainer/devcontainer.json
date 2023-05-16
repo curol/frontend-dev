@@ -11,7 +11,7 @@
     "source=commandhistory,target=/workspaces/commandhistory,type=volume"
   ],
   // For remote host
-  "workspaceMount": "source=${localWorkspaceFolderBasename},target=/workspaces/${localWorkspaceFolderBasename},type=volume",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=frontend-dev,target=/workspaces/frontend-dev,type=volume",
+  "workspaceFolder": "/workspaces/frontend-dev",
   "onCreateCommand": "sudo chown -R vscode:vscode /workspaces"
 }
