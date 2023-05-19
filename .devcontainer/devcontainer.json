@@ -7,10 +7,18 @@
     3001,
     9229
   ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server",
+        "GitHub.copilot-chat",
+        "GitHub.copilot-nightly"
+      ]
+    }
+  },
   "mounts": [
     "source=commandhistory,target=/workspaces/commandhistory,type=volume"
   ],
-  // For remote host
   "workspaceMount": "source=frontend-dev,target=/workspaces/frontend-dev,type=volume",
   "workspaceFolder": "/workspaces/frontend-dev",
   "onCreateCommand": "sudo chown -R vscode:vscode /workspaces"
