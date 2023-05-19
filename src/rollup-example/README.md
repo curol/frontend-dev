@@ -1,4 +1,14 @@
-# 01-modern-html
+# 01-modern-web
+
+## Stack
+
+- Rollup.js
+- Dotenv
+- Postcss
+- Live Server
+- Typescipt
+- Eslint
+- Prettier
 
 ## Docs
 
@@ -121,20 +131,6 @@ Rollup allows you to write your code using the new module system, and will then 
 #### Plugins
 
 See, [rollup plugins](https://github.com/rollup/plugins)
-
-#### Some Rollup scripts commands
-
-```json
-{
-  "rollup:browser": "rollup main.js --file bundle.js --format iife",
-  "rollup:html": "rollup main.js --file bundle.js --format iife --plugin html",
-  "rollup:ts": "rollup main.ts --file bundle.js --format iife --plugin typescript",
-  "rollup:ts:html": "rollup main.ts --file bundle.js --format iife --plugin typescript --plugin html",
-  "rollup:ts:html:watch": "rollup main.ts --file bundle.js --format iife --plugin typescript --plugin html --watch",
-  "rollup:node": "rollup main.js --file bundle.js --format cjs",
-  "rollup:node-browser": "rollup main.js --file bundle.js --format umd --plugin html --name \"bundle\""
-}
-```
 
 ## Environment
 

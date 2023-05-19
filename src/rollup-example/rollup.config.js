@@ -1,16 +1,16 @@
 // Import .env variables
-import dotenv from 'dotenv';
-dotenv.config({path: './.env.dev'});
+import dotenv from 'dotenv'
+dotenv.config({ path: './.env.dev' })
 // Import rollup plugins
 import typescript from '@rollup/plugin-typescript' // Typescript - https://github.com/rollup/plugins/tree/master/packages/typescript#options
-import html from '@rollup/plugin-html'
+// import html from '@rollup/plugin-html'
 import image from '@rollup/plugin-image'
 import json from '@rollup/plugin-json'
 import url from '@rollup/plugin-url'
 import postcss from 'rollup-plugin-postcss'
-import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
-
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
+import copy from 'rollup-plugin-copy'
 
 /**
  * Rollup plugins
@@ -19,24 +19,31 @@ import livereload from 'rollup-plugin-livereload';
  */
 const plugins = [
   typescript({ module: 'esnext' }),
-  html({
-    title: 'Modern HTML',
-  }),
+  // html({
+  //   title: 'Modern HTML',
+  //   publicPath: '/public',
+  // }),
   image(),
   json(),
   url(),
   postcss(),
+  copy({
+    targets: [
+      { src: 'public/*', dest: 'dist' },
+      { src: 'src/index.html', dest: 'dist' },
+    ],
+  }),
   serve({
     open: true,
     openPage: '/',
     host: 'localhost',
     port: 3000,
-    contentBase: ['./example'],
-}),
-livereload({
-    watch: ['./example'],
+    contentBase: ['./dist'],
+  }),
+  livereload({
+    watch: ['./dist'],
     exts: ['html', 'js', 'css'],
-}),
+  }),
 ]
 
 /**

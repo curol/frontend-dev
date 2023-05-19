@@ -1,3 +1,4 @@
+import './styles/index.css'
 import App from './app'
 import type { AppProps } from './app'
 
