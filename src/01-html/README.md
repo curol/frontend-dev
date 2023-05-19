@@ -26,6 +26,10 @@ This finally changed with the ES6 revision of JavaScript, which includes a synta
 
 Rollup allows you to write your code using the new module system, and will then compile it back down to existing supported formats such as CommonJS modules, AMD modules, and IIFE-style scripts. This means that you get to write future-proof code, and you also get the tremendous benefits of Tree-Shaking and Compatibility.
 
+#### Plugins
+
+See, [rollup plugins](https://github.com/rollup/plugins)
+
 #### Some Rollup scripts commands
 
 ```json
