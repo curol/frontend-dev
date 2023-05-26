@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;;AAMA","sources":["src/styles.css"],"sourcesContent":[".header {\n    font-size: xx-large;\n    font-weight: 800;\n    color: red;\n}\n\n.title {\n    font-size: large;\n    font-weight: 600;\n    color: purple;\n}\n\n"],"names":[],"version":3,"file":"index.4d663569.css.map","sourceRoot":"/__parcel_source_root/"}

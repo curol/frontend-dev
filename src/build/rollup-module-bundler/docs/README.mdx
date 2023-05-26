@@ -1,0 +1,175 @@
+# 01-modern-html
+
+## Docs
+
+- https://nodejs.org/docs/latest-v18.x/api/
+- https://pnpm.io/motivation
+- https://eslint.org/docs/latest/
+- https://prettier.io/docs/en/options.html
+- https://rollupjs.org/configuration-options/
+
+## Bundler
+
+A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file, usually for use in the browser. You may have used tools such as Browserify, Webpack, Rollup or one of many others.
+
+It usually starts with an entry file, and from there it bundles up all of the code needed for that entry file.
+
+For more information, see [Let's learn how module bundlers work](https://www.freecodecamp.org/news/lets-learn-how-module-bundlers-work-and-then-write-one-ourselves-b2e3fe6c88ae/)
+
+### Why
+
+Developing software is usually easier if you break your project into smaller separate pieces, since that often removes unexpected interactions and dramatically reduces the complexity of the problems you'll need to solve, and simply writing smaller projects in the first place isn't necessarily the answer. Unfortunately, JavaScript has not historically included this capability as a core feature in the language.
+
+This finally changed with the ES6 revision of JavaScript, which includes a syntax for importing and exporting functions and data so they can be shared between separate scripts. The specification is now fixed, but it is only implemented in modern browsers and not finalised in Node.js.
+
+### Rollup.js
+
+Rollup allows you to write your code using the new module system, and will then compile it back down to existing supported formats such as CommonJS modules, AMD modules, and IIFE-style scripts. This means that you get to write future-proof code, and you also get the tremendous benefits of Tree-Shaking and Compatibility.
+
+#### Some Rollup scripts commands
+
+```json
+{
+  "rollup:browser": "rollup main.js --file bundle.js --format iife",
+  "rollup:html": "rollup main.js --file bundle.js --format iife --plugin html",
+  "rollup:ts": "rollup main.ts --file bundle.js --format iife --plugin typescript",
+  "rollup:ts:html": "rollup main.ts --file bundle.js --format iife --plugin typescript --plugin html",
+  "rollup:ts:html:watch": "rollup main.ts --file bundle.js --format iife --plugin typescript --plugin html --watch",
+  "rollup:node": "rollup main.js --file bundle.js --format cjs",
+  "rollup:node-browser": "rollup main.js --file bundle.js --format umd --plugin html --name \"bundle\""
+}
+```
+
+## Environment
+
+### Packages
+
+https://docs.npmjs.com/about-packages-and-modules
+
+A package is a file or directory that is described by a package.json file. A package must contain a package.json file in order to be published to the npm registry. For more information on creating a package.json file, see "Creating a package.json file".
+
+Packages can be unscoped or scoped to a user or organization, and scoped packages can be private or public
+
+---
+
+https://nodejs.org/api/packages.html
+
+Introduction
+A package is a folder tree described by a package.json file. The package consists of the folder containing the package.json file and all subfolders until the next folder containing another package.json file, or a folder named node_modules.
+
+This page provides guidance for package authors writing package.json files along with a reference for the package.json fields defined by Node.js.
+
+Determining module system#
+Node.js will treat the following as ES modules when passed to node as the initial input, or when referenced by import statements or import() expressions:
+
+- Files with an .mjs extension.
+
+- Files with a .js extension when the nearest parent package.json file contains a top-level "type" field with a value of "module".
+
+- Strings passed in as an argument to --eval, or piped to node via STDIN, with the flag --input-type=module.
+
+Node.js will treat as CommonJS all other forms of input, such as .js files where the nearest parent package.json file contains no top-level "type" field, or string input without the flag --input-type. This behavior is to preserve backward compatibility. However, now that Node.js supports both CommonJS and ES modules, it is best to be explicit whenever possible. Node.js will treat the following as CommonJS when passed to node as the initial input, or when referenced by import statements, import() expressions, or require() expressions:
+
+- Files with a .cjs extension.
+
+- Files with a .js extension when the nearest parent package.json file contains a top-level field "type" with a value of "commonjs".
+
+- Strings passed in as an argument to --eval or --print, or piped to node via STDIN, with the flag --input-type=commonjs.
+
+Package authors should include the "type" field, even in packages where all sources are CommonJS. Being explicit about the type of the package will future-proof the package in case the default type of Node.js ever changes, and it will also make things easier for build tools and loaders to determine how the files in the package should be interpreted.
+
+#### Determine module system
+
+https://nodejs.org/docs/latest-v18.x/api/packages.html#determining-module-system
+
+```json
+{
+  // ...
+  "type": "modules"
+}
+```
+
+#### Package entry points
+
+https://nodejs.org/docs/latest-v18.x/api/packages.html#package-entry-points
+
+```json
+
+{
+    // ...
+    "exports": "./src/index.ts
+}
+
+```
+
+#### Node.js package.json field definitions
+
+https://nodejs.org/docs/latest-v18.x/api/packages.html#nodejs-packagejson-field-definitions
+
+### Config
+
+- Package - package.json, .npmrc
+- Node Version Manager - .nvmrc
+- Lint - .eslintrc.js
+- Format - .prettierrc
+- Typescript - tsconfig.json
+- Bundler - rollup.config.js
+
+#### package.json
+
+```json
+{
+  // ...
+  "type": "module", // Package type module, not commonjs
+  "engines": {
+    "node": ">=18.14.2" // Node version
+  },
+  "packageManager": "pnpm@7.27.1" // Package manager version
+  //...
+}
+```
+
+#### .npmrc
+
+```bash
+auto-install-peers=false # Don't auto install dependency peers
+engine-strict=true # Enforce node version strictness
+```
+
+### Dev
+
+### Build
+
+## HTML
+
+```html
+<!DOCTYPE html>
+```
+
+This element is the doctype declaration of the HTML file. <!DOCTYPE html> tells the browser to render the HTML codes as HTML5 (as opposed to some other version of HTML).
+
+- https://web.dev/learn/html/
+
+## DOM
+
+## CSS
+
+- https://css-tricks.com/different-ways-to-write-css-in-react/
+
+## JS
+
+## TS
+
+## Getting Started
+
+### DEV
+
+What we’re using it for is its ability to run scripts in parallel — meaning both run at the same time inside the same terminal session.
+
+### Build
+
+### Production
+
+## Scripts
+
+## Notes

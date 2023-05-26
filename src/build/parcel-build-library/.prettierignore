@@ -1,0 +1,6 @@
+node_modules
+public
+.pnpm-store
+.git
+dist
+build

@@ -1,0 +1,17 @@
+{
+  // Formatter
+  //*************************************************
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // Linter
+  "eslint.enable": true,
+  "eslint.packageManager": "pnpm",
+  "eslint.runtime": "./node_modules/.bin/eslint"
+}
