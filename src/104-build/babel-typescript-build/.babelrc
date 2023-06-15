@@ -1,0 +1,10 @@
+{
+    "presets": ["@babel/preset-env", "@babel/preset-typescript"],
+    "plugins": [
+      // "@babel/plugin-proposal-class-properties",
+      // "@babel/plugin-proposal-object-rest-spread",
+      // "@babel/preset-flow"
+    ],
+    // If truthy, adds a map property to returned output. If set to "inline", a comment with a sourceMappingURL directive is added to the bottom of the returned code. If set to "both" then a map property is returned as well as a source map comment appended.
+    "sourceMaps": true
+  }

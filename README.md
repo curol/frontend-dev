@@ -6,12 +6,10 @@ As a front-end developer, you'll be responsible for creating the user interface 
 
 ## Project Goals
 
-- Research, develop & experiment modern web UI/UX.
+- Research, develop & experiment web UI/UX development.
 
 ## Roadmap
 
-- [x] Add basic single node support
-- [ ] Optimize single node storage usage, performance, and reliability
-- [ ] Add permissioning for teams, admins, and regular users
-- [ ] Add multi-node support
-- [ ] Add support for more IDEs, particularly JetBrains
+- [x] [Research build tools]()
+- [ ] Research web/internet knowledge
+- [ ] Research CSS development 

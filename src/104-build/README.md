@@ -9,17 +9,42 @@ Research & development in building source code with build tools:
 - linters
 - formatters
 
-**Building a *web app* or *library*?**
-The build settings are usually different depending on what you're building.
-For example, when using the build tool *Parcel*, (1) if developing a *web app*, the entry point is a html file as the source (i.g., `index.html`).
-In contrast, (2) if developing a *library*, Parcel requires the `package.json` to be configured and a javascript source file (i.g., `index.js`) as the entry point. 
+## What is a compiler?
 
-**Developing with a UI framework or library?**
-Also, the building settings could be different for each UI framework (i.g., React, Vue, Svelete, ...).
+In computing, a compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language). The name "compiler" is primarily used for programs that translate source code from a high-level programming language to a low-level programming language (e.g. assembly language, object code, or machine code) to create an executable program.
+It translates and compiles it down to a language that can be understood by the machine.
 
-Therefore, when building, check the build tool's docs for building an app, library, and developing with a UI framework.
+```mermaid
+flowchart LR
+    hll["`
+        **High Level Language**
+        ----------------------------
+        Source Code
+    `"]
+    compiler["`
+        **Compiler**
+        ----------------------------
+        Compiles
+    `"]
+    lll["`
+        **Low Level Language**
+        ----------------------------
+        Machine Code
+    `"]
+    hll --> compiler --> lll
+```
 
-## About Packages
+For an awesome tutorial on compilers, check out [the-super-tiny-compiler](https://github.com/jamiebuilds/the-super-tiny-compiler), which also explains how Babel itself works on a high level.
+
+In summary, basically, a compiler will try to understand what we want to do and will turn our language into usually a low-level language such as machine code.
+
+For example, consider a high-level language like Javascript; an interpreter will read this code line by line and spit out byte code that executes this code for us. Or a compiler might take our code and spit out machine code to give to a CPU so it can run the code.
+
+
+
+## Packages
+
+### What is a package?
 
 The npm registry contains packages, many of which are also Node modules, or contain Node modules. Read on to understand how they differ and how they interact.
 
@@ -67,7 +92,9 @@ The "exports" provides a modern alternative to "main" allowing multiple entry po
 
 For more information, see [Node.js API - Package entrypoint](https://nodejs.org/docs/latest-v18.x/api/packages.html#package-entry-points).
 
-## About Modules
+## Modules
+
+### What is a module?
 
 A **module** is any file or directory in the `node_modules` directory that can be loaded by the Node.js `require()` function.
 
@@ -84,6 +111,17 @@ was loaded *from* a file. For example, in the following program:
     var req = require('request')
 
 we might say that "The variable `req` refers to the `request` module".
+
+### Module Bundlers
+
+A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file, usually for use in the browser. You may have used tools such as Browserify, Webpack, Rollup or one of many others.
+
+It usually starts with an entry file, and from there it bundles up all of the code needed for that entry file.
+
+Visit the following resources to learn more:
+
+- [Let’s learn how module bundlers work](https://www.freecodecamp.org/news/lets-learn-how-module-bundlers-work-and-then-write-one-ourselves-b2e3fe6c88ae/)
+- [Module Bundlers Explained](https://www.youtube.com/watch?v=5IG4UmULyoA)
 
 ### Determining module system
  
@@ -121,3 +159,11 @@ Node.js will treat as CommonJS all other forms of input, such as .js files where
 - Strings passed in as an argument to --eval or --print, or piped to node via STDIN, with the flag --input-type=commonjs.
 
 Package authors should include the "type" field, even in packages where all sources are CommonJS. Being explicit about the type of the package will future-proof the package in case the default type of Node.js ever changes, and it will also make things easier for build tools and loaders to determine how the files in the package should be interpreted.
+
+## Resources
+
+- [Inside the JavaScript Engine](https://medium.com/@allansendagi/inside-the-javascript-engine-compiler-and-interpreter-c8faa638b0d9)
+- [The super tiny compiler](https://github.com/jamiebuilds/the-super-tiny-compiler)
+- [Webpack is a static module bundler for modern JavaScript applications](https://webpack.js.org/)
+- [Vite Next Generation Frontend Tooling](https://vitejs.dev)
+- [Parcel is a zero configuration build tool for the web](https://parceljs.org/)
