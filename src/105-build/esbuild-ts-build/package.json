@@ -1,0 +1,23 @@
+{
+  "name": "esbuild-ts-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "pnpm bundle:js && pnpm bundle:styles",
+    "bundle:js":"esbuild src/index.ts --outfile=./dist/bundle.js --bundle --loader:.ts=ts",
+    "bundle:styles": "esbuild src/style.css --outfile=./dist/bundle.css --bundle",
+    "serve":"pnpm bundle:js --serve=localhost:8000 --servedir=./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "esbuild": "^0.18.4",
+    "eslint": "^8.43.0",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}

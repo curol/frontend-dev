@@ -1,1 +1,0 @@
-https://www.typescriptlang.org/docs/handbook/dom-manipulation.html

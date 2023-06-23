@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   concurrently: ^8.0.1
   deepmerge: ^4.3.1
-  degit: ^2.8.4
   eslint: ^8.39.0
   prettier: ^2.8.8
   rimraf: ^5.0.0
@@ -12,7 +11,6 @@ specifiers:
 devDependencies:
   concurrently: 8.0.1
   deepmerge: 4.3.1
-  degit: 2.8.4
   eslint: 8.39.0
   prettier: 2.8.8
   rimraf: 5.0.0
@@ -278,12 +276,6 @@ packages:
   /deepmerge/4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /degit/2.8.4:
-    resolution: {integrity: sha512-vqYuzmSA5I50J882jd+AbAhQtgK6bdKUJIex1JNfEUPENCgYsxugzKVZlFyMwV4i06MmnV47/Iqi5Io86zf3Ng==}
-    engines: {node: '>=8.0.0'}
-    hasBin: true
     dev: true
 
   /doctrine/3.0.0:

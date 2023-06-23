@@ -1,0 +1,9 @@
+/* src/color.css */
+.beautiful {
+  color: rgb(0, 0, 255);
+}
+
+/* src/style.css */
+p {
+  font-weight: bold;
+}
