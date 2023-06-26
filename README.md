@@ -10,6 +10,4 @@ As a front-end developer, you'll be responsible for creating the user interface 
 
 ## Roadmap
 
-- [x] [Research build tools]()
-- [ ] Research web/internet knowledge
-- [ ] Research CSS development 
+- [ x ] Build Tools
