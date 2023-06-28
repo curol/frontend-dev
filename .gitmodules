@@ -1,0 +1,3 @@
+[submodule "nextjs-storage-postgres-prisma"]
+    path = src/500-storage/nextjs-storage-postgres-prisma
+    url = https://github.com/curol/nextjs-storage-postgres-prisma.git
